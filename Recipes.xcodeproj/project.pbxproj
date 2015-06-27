@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		6229549F1B3F03E30028968E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229549E1B3F03E30028968E /* AppDelegate.swift */; };
-		622954A11B3F03E30028968E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622954A01B3F03E30028968E /* ViewController.swift */; };
 		622954A41B3F03E30028968E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622954A21B3F03E30028968E /* Main.storyboard */; };
 		622954A71B3F03E30028968E /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 622954A51B3F03E30028968E /* Recipes.xcdatamodeld */; };
 		622954A91B3F03E30028968E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622954A81B3F03E30028968E /* Assets.xcassets */; };
 		622954AC1B3F03E30028968E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622954AA1B3F03E30028968E /* LaunchScreen.storyboard */; };
 		622954B71B3F03E30028968E /* RecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622954B61B3F03E30028968E /* RecipesTests.swift */; };
 		622954C21B3F03E30028968E /* RecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622954C11B3F03E30028968E /* RecipesUITests.swift */; };
+		622954D01B3F09410028968E /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622954CF1B3F09410028968E /* RecipeListViewController.swift */; };
+		622954D21B3F09850028968E /* RecipeListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622954D11B3F09850028968E /* RecipeListDataSource.swift */; };
+		622955131B3F0FE70028968E /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622955121B3F0FE70028968E /* RecipeListTableViewCell.swift */; };
+		622955171B3F16130028968E /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622955161B3F16130028968E /* RecipeDetailViewController.swift */; };
+		622955191B3F175B0028968E /* RecipesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622955181B3F175B0028968E /* RecipesNavigationController.swift */; };
+		6229551B1B3F31DB0028968E /* RecipeDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229551A1B3F31DB0028968E /* RecipeDetailDataSource.swift */; };
+		6229551D1B3F36380028968E /* RecipeDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229551C1B3F36380028968E /* RecipeDescriptionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,6 @@
 /* Begin PBXFileReference section */
 		6229549B1B3F03E30028968E /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6229549E1B3F03E30028968E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		622954A01B3F03E30028968E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		622954A31B3F03E30028968E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		622954A61B3F03E30028968E /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
 		622954A81B3F03E30028968E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		622954BD1B3F03E30028968E /* RecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		622954C11B3F03E30028968E /* RecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesUITests.swift; sourceTree = "<group>"; };
 		622954C31B3F03E30028968E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		622954CF1B3F09410028968E /* RecipeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		622954D11B3F09850028968E /* RecipeListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListDataSource.swift; sourceTree = "<group>"; };
+		622955121B3F0FE70028968E /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
+		622955161B3F16130028968E /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		622955181B3F175B0028968E /* RecipesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesNavigationController.swift; sourceTree = "<group>"; };
+		6229551A1B3F31DB0028968E /* RecipeDetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailDataSource.swift; sourceTree = "<group>"; };
+		6229551C1B3F36380028968E /* RecipeDescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,10 @@
 		6229549D1B3F03E30028968E /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				622955151B3F15EC0028968E /* Recipe Detail */,
+				622955141B3F15E30028968E /* Recipe List */,
+				622955181B3F175B0028968E /* RecipesNavigationController.swift */,
 				6229549E1B3F03E30028968E /* AppDelegate.swift */,
-				622954A01B3F03E30028968E /* ViewController.swift */,
 				622954A21B3F03E30028968E /* Main.storyboard */,
 				622954A81B3F03E30028968E /* Assets.xcassets */,
 				622954AA1B3F03E30028968E /* LaunchScreen.storyboard */,
@@ -126,6 +140,26 @@
 				622954C31B3F03E30028968E /* Info.plist */,
 			);
 			path = RecipesUITests;
+			sourceTree = "<group>";
+		};
+		622955141B3F15E30028968E /* Recipe List */ = {
+			isa = PBXGroup;
+			children = (
+				622954CF1B3F09410028968E /* RecipeListViewController.swift */,
+				622954D11B3F09850028968E /* RecipeListDataSource.swift */,
+				622955121B3F0FE70028968E /* RecipeListTableViewCell.swift */,
+			);
+			name = "Recipe List";
+			sourceTree = "<group>";
+		};
+		622955151B3F15EC0028968E /* Recipe Detail */ = {
+			isa = PBXGroup;
+			children = (
+				622955161B3F16130028968E /* RecipeDetailViewController.swift */,
+				6229551A1B3F31DB0028968E /* RecipeDetailDataSource.swift */,
+				6229551C1B3F36380028968E /* RecipeDescriptionTableViewCell.swift */,
+			);
+			name = "Recipe Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				622954A11B3F03E30028968E /* ViewController.swift in Sources */,
+				622954D21B3F09850028968E /* RecipeListDataSource.swift in Sources */,
+				622955131B3F0FE70028968E /* RecipeListTableViewCell.swift in Sources */,
+				622954D01B3F09410028968E /* RecipeListViewController.swift in Sources */,
 				6229549F1B3F03E30028968E /* AppDelegate.swift in Sources */,
+				6229551D1B3F36380028968E /* RecipeDescriptionTableViewCell.swift in Sources */,
+				622955191B3F175B0028968E /* RecipesNavigationController.swift in Sources */,
+				6229551B1B3F31DB0028968E /* RecipeDetailDataSource.swift in Sources */,
+				622955171B3F16130028968E /* RecipeDetailViewController.swift in Sources */,
 				622954A71B3F03E30028968E /* Recipes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
