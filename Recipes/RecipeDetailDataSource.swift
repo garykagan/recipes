@@ -12,7 +12,7 @@ class RecipeDetailDataSource: NSObject, UITableViewDataSource {
     // MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,6 +20,8 @@ class RecipeDetailDataSource: NSObject, UITableViewDataSource {
         
         if section == 2{
             rowCount = 5
+        } else if section == 3 {
+            rowCount = 20
         }
         
         return rowCount
@@ -33,6 +35,8 @@ class RecipeDetailDataSource: NSObject, UITableViewDataSource {
             cellIdentifier = "RecipeDescriptionCell"
         } else if indexPath.section == 2 {
             cellIdentifier = "RecipeIngredientItemCell"
+        } else if indexPath.section == 3 {
+            cellIdentifier = "RecipeStepCell"
         }
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier!, forIndexPath: indexPath)
         
@@ -48,5 +52,23 @@ class RecipeDetailDataSource: NSObject, UITableViewDataSource {
     
     func configureDescriptionCell(cell: RecipeDescriptionTableViewCell, atIndexPath indexPath: NSIndexPath) {
         cell.content.text = "The quick brown fox jumped over the lazy dog.  The quick brown fox jumped over the lazy dog.  The quick brown fox jumped over the lazy dog.  The quick brown fox jumped over the lazy dog.  The quick brown fox jumped over the lazy dog."
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.section == 2 {
+            return true
+        }
+        
+        return false
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var title: String? = nil
+        if section == 2 {
+            title = "Ingredients"
+        } else if section == 3 {
+            title = "Procedure"
+        }
+        return title
     }
 }

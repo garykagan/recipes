@@ -59,4 +59,27 @@ class RecipeDetailViewController: UIViewController, UITableViewDelegate {
             }
         }
     }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        if indexPath.section == 2 {
+            let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "+ Shopping List", handler: { (rowAction: UITableViewRowAction, indexPath: NSIndexPath) -> Void in
+                print("Check!")
+            })
+            
+            editAction.backgroundColor = UIColor(colorLiteralRed: 0.776, green: 0.117, blue: 0, alpha: 1.0)
+            
+            return [ editAction ]
+        }
+        return nil
+    }
+    
+    func tableView(tableView: UITableView, willBeginEditingRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)! as! RecipeIngredientItemTableViewCell
+        cell.titleLabel.textAlignment = NSTextAlignment.Right
+    }
+    
+    func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)! as! RecipeIngredientItemTableViewCell
+        cell.titleLabel.textAlignment = NSTextAlignment.Left
+    }
 }

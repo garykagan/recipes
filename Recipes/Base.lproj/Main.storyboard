@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Nl-kO-ZHs">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -104,7 +105,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeImageCell" rowHeight="150" id="Jzr-CQ-IWS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecipeImageCell" rowHeight="150" id="Jzr-CQ-IWS">
                                         <rect key="frame" x="0.0" y="86" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jzr-CQ-IWS" id="cy1-aW-BtK">
@@ -123,7 +124,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeDescriptionCell" rowHeight="100" id="Vw1-Xl-le1" customClass="RecipeDescriptionTableViewCell" customModule="Recipes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecipeDescriptionCell" rowHeight="100" id="Vw1-Xl-le1" customClass="RecipeDescriptionTableViewCell" customModule="Recipes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="236" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vw1-Xl-le1" id="gtG-sr-N04">
@@ -148,37 +149,84 @@
                                             <outlet property="content" destination="A43-lo-kEl" id="XF2-11-OQv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeIngredientItemCell" id="ffD-ih-rwD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecipeIngredientItemCell" id="ffD-ih-rwD" customClass="RecipeIngredientItemTableViewCell" customModule="Recipes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="336" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffD-ih-rwD" id="4pF-uD-7bh">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-cR-20s">
-                                                    <rect key="frame" x="8" y="16" width="8.5" height="27.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sW-oN-RkP">
+                                                    <rect key="frame" x="8" y="8" width="584" height="43.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="1">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Large Onion">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7sW-oN-RkP" firstAttribute="bottom" secondItem="4pF-uD-7bh" secondAttribute="bottomMargin" id="F5H-Lz-Gen"/>
+                                                <constraint firstItem="7sW-oN-RkP" firstAttribute="top" secondItem="4pF-uD-7bh" secondAttribute="topMargin" id="fxS-Zq-dvJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7sW-oN-RkP" secondAttribute="trailing" id="l5D-hh-bzZ"/>
+                                                <constraint firstItem="7sW-oN-RkP" firstAttribute="leading" secondItem="4pF-uD-7bh" secondAttribute="leadingMargin" id="w10-Eo-rzH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="7sW-oN-RkP" id="5RR-mw-F67"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeStepCell" rowHeight="109" id="lcR-0a-Jqz">
+                                        <rect key="frame" x="0.0" y="396" width="600" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lcR-0a-Jqz" id="spa-z3-neL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-WO-g3C">
+                                                    <rect key="frame" x="8" y="8" width="584" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="27.5" id="Zup-Im-J0t"/>
-                                                        <constraint firstAttribute="width" constant="8.5" id="uY4-AM-RTr"/>
+                                                        <constraint firstAttribute="height" constant="21" id="b8U-vx-av6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Large Onion" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sW-oN-RkP">
-                                                    <rect key="frame" x="29" y="8" width="524" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2o9-o6-LGV">
+                                                    <rect key="frame" x="8" y="30" width="584" height="67"/>
+                                                    <string key="text">These are instructions for this step.  These are instructions for this step.  These are instructions for this step.  These are instructions for this step.  These are instructions for this step.  These are instructions for this step.  These are instructions for this step.  These are instructions for this step.  </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="WeN-cR-20s" firstAttribute="centerY" secondItem="4pF-uD-7bh" secondAttribute="centerY" id="Dgv-Os-qoj"/>
-                                                <constraint firstItem="7sW-oN-RkP" firstAttribute="bottom" secondItem="4pF-uD-7bh" secondAttribute="bottomMargin" id="F5H-Lz-Gen"/>
-                                                <constraint firstItem="7sW-oN-RkP" firstAttribute="leading" secondItem="WeN-cR-20s" secondAttribute="trailing" constant="12.5" id="M05-5b-euv"/>
-                                                <constraint firstItem="WeN-cR-20s" firstAttribute="leading" secondItem="4pF-uD-7bh" secondAttribute="leadingMargin" id="ch9-7w-1iB"/>
-                                                <constraint firstItem="7sW-oN-RkP" firstAttribute="top" secondItem="4pF-uD-7bh" secondAttribute="topMargin" id="fxS-Zq-dvJ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7sW-oN-RkP" secondAttribute="trailing" id="l5D-hh-bzZ"/>
+                                                <constraint firstItem="2o9-o6-LGV" firstAttribute="top" secondItem="2rO-WO-g3C" secondAttribute="bottom" constant="1" id="1sD-HK-TTg"/>
+                                                <constraint firstItem="2rO-WO-g3C" firstAttribute="leading" secondItem="spa-z3-neL" secondAttribute="leadingMargin" id="43f-CC-XKk"/>
+                                                <constraint firstItem="2rO-WO-g3C" firstAttribute="top" secondItem="spa-z3-neL" secondAttribute="topMargin" id="Nhh-Kj-5A4"/>
+                                                <constraint firstItem="2rO-WO-g3C" firstAttribute="trailing" secondItem="spa-z3-neL" secondAttribute="trailingMargin" id="XTc-QF-CNv"/>
+                                                <constraint firstItem="2o9-o6-LGV" firstAttribute="leading" secondItem="spa-z3-neL" secondAttribute="leadingMargin" id="YZC-pB-LS2"/>
+                                                <constraint firstItem="2o9-o6-LGV" firstAttribute="trailing" secondItem="spa-z3-neL" secondAttribute="trailingMargin" id="eFn-hF-EuC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2o9-o6-LGV" secondAttribute="bottom" constant="3.5" id="opi-JG-54j"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
