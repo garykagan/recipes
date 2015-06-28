@@ -21,8 +21,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vgd-cv-37v">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.77547166379999999" green="0.1192908654" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" red="0.77547166379999999" green="0.1192908654" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecipeRowCell" id="AVr-zo-kzi" customClass="RecipeListTableViewCell" customModule="Recipes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="600" height="80"/>
@@ -31,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg_sandwich" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-lK-o05">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg_sandwich_medium" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-lK-o05">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXE-2W-Lfb">
@@ -74,7 +72,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.77547166379999999" green="0.1192908654" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Vgd-cv-37v" secondAttribute="trailing" constant="-20" id="BaH-my-e24"/>
                             <constraint firstItem="Vgd-cv-37v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="KQU-80-cMm"/>
@@ -237,7 +234,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.77547166375291376" green="0.11929086538461538" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="3oW-Pr-rYg" secondAttribute="trailing" constant="-20" id="9uw-da-o03"/>
                             <constraint firstItem="3oW-Pr-rYg" firstAttribute="leading" secondItem="ccu-lm-gBe" secondAttribute="leadingMargin" constant="-20" id="ABW-mq-h8M"/>
@@ -297,7 +293,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="egg_sandwich" width="2560" height="1712"/>
+        <image name="egg_sandwich_medium" width="640" height="428"/>
         <image name="egg_sandwich_small" width="300" height="201"/>
     </resources>
 </document>
