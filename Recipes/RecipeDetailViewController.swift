@@ -35,7 +35,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        if indexPath.section == 2 {
+        if indexPath.section == 2 || indexPath.section == 3 {
             if let cell = tableView.cellForRowAtIndexPath(indexPath) {
                 switch (cell.accessoryType) {
                 case .None:
