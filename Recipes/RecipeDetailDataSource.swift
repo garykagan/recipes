@@ -36,7 +36,19 @@ class RecipeDetailDataSource: NSObject, UITableViewDataSource {
         } else if indexPath.section == 2 {
             cellIdentifier = "RecipeIngredientItemCell"
         } else if indexPath.section == 3 {
-            cellIdentifier = "RecipeStepCell"
+            
+            switch indexPath.row % 4 {
+            case 0:
+                cellIdentifier = "RecipeStepCell"
+            case 1:
+                cellIdentifier = "RecipeStepTimeCell"
+            case 2:
+                cellIdentifier = "RecipeStepTimeImageCell"
+            case 3:
+                cellIdentifier = "RecipeStepImageCell"
+            default:
+                cellIdentifier = "RecipeStepCell"
+            }
         }
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier!, forIndexPath: indexPath)
         
