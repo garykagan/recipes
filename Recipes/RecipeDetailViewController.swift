@@ -15,7 +15,8 @@ class RecipeDetailViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         self.title = "Egg Sandwich"
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        // Do any additional setup after loading the view.
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Shopping", style: UIBarButtonItemStyle.Plain, target: self, action: "shopping")
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +24,9 @@ class RecipeDetailViewController: UIViewController, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func shopping() {
+        self.navigationController?.performSegueWithIdentifier("ShowShoppingListSegue", sender: self)
+    }
 
     /*
     // MARK: - Navigation
@@ -63,7 +67,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         if indexPath.section == 2 {
             let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "+ Shopping List", handler: { (rowAction: UITableViewRowAction, indexPath: NSIndexPath) -> Void in
-                print("Check!")
+                tableView.editing = false
             })
             
             editAction.backgroundColor = UIColor(colorLiteralRed: 0.776, green: 0.117, blue: 0, alpha: 1.0)

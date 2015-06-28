@@ -13,12 +13,17 @@ class RecipeListViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Recipes"
-        // Do any additional setup after loading the view.
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Shopping", style: UIBarButtonItemStyle.Plain, target: self, action: "shopping")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func shopping() {
+        self.navigationController?.performSegueWithIdentifier("ShowShoppingListSegue", sender: self)
     }
     
     // MARK: Table View Delegate

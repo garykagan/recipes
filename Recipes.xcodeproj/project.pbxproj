@@ -22,6 +22,7 @@
 		6229551B1B3F31DB0028968E /* RecipeDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229551A1B3F31DB0028968E /* RecipeDetailDataSource.swift */; };
 		6229551D1B3F36380028968E /* RecipeDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229551C1B3F36380028968E /* RecipeDescriptionTableViewCell.swift */; };
 		6229551F1B3F65790028968E /* RecipeIngredientItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229551E1B3F65790028968E /* RecipeIngredientItemTableViewCell.swift */; };
+		622955221B3F74BA0028968E /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622955211B3F74BA0028968E /* ShoppingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6229551A1B3F31DB0028968E /* RecipeDetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailDataSource.swift; sourceTree = "<group>"; };
 		6229551C1B3F36380028968E /* RecipeDescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		6229551E1B3F65790028968E /* RecipeIngredientItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredientItemTableViewCell.swift; sourceTree = "<group>"; };
+		622955211B3F74BA0028968E /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		6229549D1B3F03E30028968E /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				622955201B3F74700028968E /* Shopping List */,
 				622955151B3F15EC0028968E /* Recipe Detail */,
 				622955141B3F15E30028968E /* Recipe List */,
 				622955181B3F175B0028968E /* RecipesNavigationController.swift */,
@@ -163,6 +166,14 @@
 				6229551E1B3F65790028968E /* RecipeIngredientItemTableViewCell.swift */,
 			);
 			name = "Recipe Detail";
+			sourceTree = "<group>";
+		};
+		622955201B3F74700028968E /* Shopping List */ = {
+			isa = PBXGroup;
+			children = (
+				622955211B3F74BA0028968E /* ShoppingListViewController.swift */,
+			);
+			name = "Shopping List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				622955221B3F74BA0028968E /* ShoppingListViewController.swift in Sources */,
 				622954D21B3F09850028968E /* RecipeListDataSource.swift in Sources */,
 				622955131B3F0FE70028968E /* RecipeListTableViewCell.swift in Sources */,
 				622954D01B3F09410028968E /* RecipeListViewController.swift in Sources */,
@@ -447,7 +459,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Recipes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gkagan.Recipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,7 +470,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Recipes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gkagan.Recipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,6 +543,7 @@
 				622954C81B3F03E30028968E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		622954C91B3F03E30028968E /* Build configuration list for PBXNativeTarget "RecipesTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +552,7 @@
 				622954CB1B3F03E30028968E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		622954CC1B3F03E30028968E /* Build configuration list for PBXNativeTarget "RecipesUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +561,7 @@
 				622954CE1B3F03E30028968E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

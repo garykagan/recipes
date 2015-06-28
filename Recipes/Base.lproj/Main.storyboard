@@ -254,6 +254,30 @@
             </objects>
             <point key="canvasLocation" x="1812" y="141"/>
         </scene>
+        <!--Shopping-->
+        <scene sceneID="Blw-d0-HB8">
+            <objects>
+                <viewController title="Shopping" id="6pD-49-vR7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H2S-1F-rPz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wh8-Eb-5kx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dqv-rT-wSA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3E7-aa-Q2I">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czm-pZ-BKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-561"/>
+        </scene>
         <!--Recipes Navigation Controller-->
         <scene sceneID="GWv-b8-TJg">
             <objects>
@@ -264,6 +288,7 @@
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hXp-Nj-Vg2"/>
+                        <segue destination="6pD-49-vR7" kind="show" identifier="ShowShoppingListSegue" id="S3a-CY-WTr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLn-qB-qah" userLabel="First Responder" sceneMemberID="firstResponder"/>
